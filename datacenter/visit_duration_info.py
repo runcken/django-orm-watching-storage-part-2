@@ -22,6 +22,5 @@ def format_duration(total_secs_in_repo):
 
 
 def is_visit_long(visit):
-    if get_duration(visit) > HOUR_IN_SECS:
-        return True
-    return False
+    return get_duration(visit) > HOUR_IN_SECS
+
