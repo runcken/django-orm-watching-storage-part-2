@@ -4,8 +4,8 @@ from datacenter.models import Passcard
 
 
 def active_passcards_view(request):
-    access_cards = Passcard.objects.filter(is_active=True)
+    active_passcards = Passcard.objects.filter(is_active=True)
     context = {
-        'active_passcards': access_cards,
+        'active_passcards': active_passcards,
     }
     return render(request, 'active_passcards.html', context)
